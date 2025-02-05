@@ -1,10 +1,8 @@
 ---
-import Footer from "../components/Footer.astro";
-import Hamburger from "../components/Hamburger.astro";
-import Navigation from "../components/Navigation.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 
 import "../styles/global.css";
-const pageTitle = "Home Page";
+const pageTitle = "Index";
 ---
 
 <html lang="en">
@@ -13,14 +11,13 @@ const pageTitle = "Home Page";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Matrix-Stream</title>
+    <title>Matrix-Stream - {pageTitle}</title>
   </head>
   <body>
-    <Hamburger />
-    <Navigation />
-    <h1>Matrix-Stream</h1>
-    <h3>{pageTitle}</h3>
-    <Footer />
+
+    <BaseLayout pageTitle={pageTitle}>
+      <h2>{pageTitle}</h2>
+    </BaseLayout>
 
     <script>
       import "../scripts/menu.js";

@@ -1,0 +1,18 @@
+---
+const { url, text } = Astro.props;
+---
+
+<a class="btn" href={`${url}`}>{text}</a>
+
+<style>
+	.btn {
+		display: inline-block;
+		margin: 1rem 0;
+		padding: 0.5rem 1rem;
+		color: white;
+		background-color: #8c12bd;
+		text-decoration: none;
+		border-radius: 0.5rem;
+		text-transform: uppercase;
+	}
+</style>

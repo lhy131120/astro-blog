@@ -1,8 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-
-import "../styles/global.css";
-const pageTitle = "About";
+const pageTitle = "Login";
 ---
 
 <html lang="en">
@@ -13,11 +11,8 @@ const pageTitle = "About";
 		<title>Matrix-Stream - {pageTitle}</title>
 	</head>
 	<body>
-		<body>
-			<BaseLayout pageTitle={pageTitle}>
-				<h2 class="gradient-text">{pageTitle}</h2>
-				<h3>... and my new Astro site!</h3>
-			</BaseLayout>
-		</body>
+		<BaseLayout pageTitle={pageTitle}>
+			<h2>{pageTitle}</h2>
+		</BaseLayout>
 	</body>
 </html>

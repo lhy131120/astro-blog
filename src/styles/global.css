@@ -1,80 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Kreon:wght@300..700&family=Noto+Serif+TC:wght@200..900&display=swap');
+
+
 html {
-  background-color: #f1f5f9;
-  font-family: sans-serif;
+  background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+  font-family: "Kreon", "Noto Serif TC", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 body {
   margin: 0 auto;
   width: 100%;
+  height: 100vh;
   max-width: 80ch;
   padding: 1rem;
   line-height: 1.5;
 }
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 h1 {
   margin: 1rem 0;
   font-size: 2.5rem;
 }
-/* nav styles */
-.hamburger {
-  padding-right: 20px;
-  cursor: pointer;
+
+.gradient-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15vmin;
+  line-height: 10vmin;
+  color: transparent;
+  background: conic-gradient(#D9D7F1 0 12%,
+      #BAABDA 12% 33%,
+      #E7FBBE 33% 55%,
+      #FFCBCB 55% 70%,
+      #B5DEFF 70% 79%,
+      #F7D1BA 79% 100%);
+  background-size: 50%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: expand-rev 8s ease-in-out infinite;
 }
 
-.hamburger .line {
-  display: block;
-  width: 40px;
-  height: 5px;
-  margin-bottom: 10px;
-  background-color: #ff9776;
-}
+@keyframes expand-rev {
 
-.nav-links {
-  width: 100%;
-  top: 5rem;
-  left: 48px;
-  background-color: #ff9776;
-  display: none;
-  margin: 0;
-}
-
-.nav-links a {
-  display: block;
-  text-align: center;
-  padding: 10px 0;
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.nav-links a:hover, a:focus {
-  background-color: #ff9776;
-}
-
-.expanded {
-  display: unset;
-}
-
-@media screen and (min-width: 636px) {
-  .nav-links {
-    margin-left: 5em;
-    display: block;
-    position: static;
-    width: auto;
-    background: none;
+  0%,
+  100% {
+    background-position: left top;
   }
 
-  .nav-links a {
-    display: inline-block;
-    padding: 15px 20px;
+  25% {
+    background-position: right bottom;
   }
 
-  .hamburger {
-    display: none;
+  50% {
+    background-position: left bottom;
+  }
+
+  75% {
+    background-position: right top;
   }
 }
+
+
+@media screen and (min-width: 636px) {}

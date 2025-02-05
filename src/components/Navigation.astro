@@ -1,9 +1,64 @@
 ---
-
+const nav = [
+	{
+		name: "尋找教練",
+		link: "/about",
+	},
+	{
+		name: "部落格",
+		link: "/blog",
+	},
+	{
+		name: "健身方案",
+		link: "/about",
+	},
+	{
+		name: "登入",
+		link: "/login",
+	},
+];
 ---
 
-<div class="nav-links">
-  <a href="/">Home</a>
-  <a href="/about">About</a>
-  <a href="/blog">Blog</a>
-</div>
+<nav class="nav">
+	<ul class="nav-wrap">
+		<li class="nav-logo"><a class="nav-" href="/">LiveFit+</a></li>
+		{
+			nav.map((item) => (
+				<li class="nav-item">
+					<a class="nav-link" href={item.link}>
+						{item.name}
+					</a>
+				</li>
+			))
+		}
+	</ul>
+</nav>
+
+<style>
+	.nav {
+		background-color: transparent;
+	}
+
+	.nav-wrap {
+		display: flex;
+		align-items: center;
+		width: 100%;
+	}
+
+	.nav-wrap .nav-logo {
+		margin-right: auto;
+	}
+
+	.nav-wrap .nav-logo a {
+		display: block;
+		font-size: 1.875em;
+		font-weight: 900;
+		font-style: italic;
+		color: rgba(0, 0, 0, 0.85);
+	}
+
+	.nav-link {
+		position: relative;
+		padding: 0.375em 0.875em;
+	}
+</style>
